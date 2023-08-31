@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: url(bg.png);
+    background-size: cover;
+    /* background-repeat: no-repeat;  */
+}
+
+
+.container {
+
+    color: white;
+    /* border: 5px solid blue; */
+    position: absolute;
+    top: 30%;
+    left: 29%;
+    width: 40%;
+}
+
+.container h2 {
+    font-family: 'Black Ops One', cursive;
+    font-size: 40px;
+    border-bottom: 2px solid white;
+    padding: 13px 0;
+    margin-bottom: 20px;
+    filter: drop-shadow(2px 2px black);
+    z-index: -1;
+    /* Lower z-index value than the paw images */
+    position: relative;
+
+}
+
+.box {
+    width: 100%;
+    margin: 12px 10px;
+    border-bottom: 2px solid #8181ff;
+}
+
+.box i {
+    color: white;
+    filter: drop-shadow(2px 2px black);
+    cursor: pointer;
+}
+
+.box input {
+    border: none;
+    background: none;
+    width: 85%;
+    outline: none;
+    font-size: 20px;
+    margin: 20px 0;
+    padding: 0px 15px;
+    color: white;
+    filter: drop-shadow(2px 2px black);
+
+}
+
+.box input::placeholder {
+    color: white;
+    filter: drop-shadow(2px 2px black);
+
+
+}
+
+
+
+.btn {
+    color: white;
+    background: none;
+    font-size: 20px;
+    cursor: pointer;
+    outline: none;
+    margin: 12px 10px;
+    border-radius: 10px;
+    border: 1px solid blue;
+    padding: 10px 15px;
+    filter: drop-shadow(2px 2px black);
+
+}
+
+.btn:hover {
+    color: black;
+    background-color: white;
+}
+
+.catanim {
+    position: relative;
+    z-index: -1;
+}
+
+
+#catImage {
+    position: absolute;
+    top: -268px;
+    left: 70px;
+    height: 400px;
+    width: 400px;
+
+}
+
+#eyesocket {
+    position: absolute;
+    top: -268px;
+    left: 70px;
+    height: 400px;
+    width: 400px;
+    pointer-events: none;
+
+}
+
+#pupil {
+    position: absolute;
+    top: -268px;
+    left: 70px;
+    height: 400px;
+    width: 400px;
+    pointer-events: none;
+
+}
+
+#glasses {
+    position: absolute;
+    top: -268px;
+    left: 70px;
+    height: 400px;
+    width: 400px;
+    pointer-events: none;
+    z-index: 1;
+    display: none;
+}
+
+#paw {
+    position: absolute;
+    top: -268px;
+    left: 70px;
+    height: 400px;
+    width: 400px;
+    z-index: 2;
+
+}
+
+#paw2 {
+    position: absolute;
+    top: -268px;
+    left: 225px;
+    height: 400px;
+    width: 400px;
+    z-index: 2;
+}
+
+#cbd {
+    position: absolute;
+    top: -268px;
+    left: 70px;
+    height: 400px;
+    width: 400px;
+
+}
+
+#eyesocket,
+#pupil {
+    z-index: 1;
+}

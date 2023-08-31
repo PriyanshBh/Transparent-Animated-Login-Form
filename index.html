@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/6d6c8dbd8c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Transparent Form</title>
+    <link rel="web icon" href="bg.png">
+</head>
+
+<body>
+    <div class="container">
+        <h2>Log In</h2>
+        <div class="catanim">
+            <img id="catImage" src="cat.png" alt="Cat Image">
+            <img id="eyesocket" src="eyesocket.png">
+            <img id="pupil" src="pupil.png">
+            <img id="glasses" src="glasses.png">
+            <img id="paw" src="paw.png">
+            <img id="paw2" src="paw2.png">
+            <img id="cbd" src="cbd.png">
+        </div>
+
+        <div class="box">
+            <i class="fa fa-envelope"></i>
+            <input type="email" name="email" id="email" placeholder="Enter Your Email-id" autocomplete="off">
+        </div>
+        <div class="box">
+            <i class="fa fa-lock"></i>
+            <input type="password" name="password" id="password" placeholder="Enter Your Password">
+            <i class="fa fa-eye-slash"></i>
+        </div>
+        <button class="btn">SignIn</button>
+    </div>
+
+
+    <script>
+        const passwordInput = document.getElementById("password");
+        const togglePassword = document.querySelector(".fa-eye-slash");
+        const pupil = document.getElementById("pupil");
+        const glasses = document.getElementById("glasses");
+        const emailInput = document.getElementById("email");
+        togglePassword.addEventListener("click", function () {
+            if (passwordInput.type === "password") {
+                passwordInput.type = "text";
+                togglePassword.classList.remove("fa-eye-slash");
+                togglePassword.classList.add("fa-eye");
+                glasses.style.display = "block"; 
+
+            } else {
+                passwordInput.type = "password";
+                togglePassword.classList.remove("fa-eye");
+                togglePassword.classList.add("fa-eye-slash");
+                glasses.style.display = "none"; 
+
+            }
+        });
+    </script>
+    <script>
+
+        document.addEventListener("mousemove", (event) => {
+            const mouseX = event.clientX;
+            const mouseY = event.clientY;
+
+            if (!emailInput.contains(document.activeElement)) {
+                const pupilX = pupil.getBoundingClientRect().left + pupil.offsetWidth / 2;
+                const pupilY = pupil.getBoundingClientRect().top + pupil.offsetHeight / 2;
+
+                const deltaX = mouseX - pupilX;
+                const deltaY = mouseY - pupilY;
+
+                const angle = Math.atan2(deltaY, deltaX);
+                const maxDistance = 8; // Adjust this value as needed
+
+                const pupilTranslateX = Math.cos(angle) * maxDistance;
+                const pupilTranslateY = Math.sin(angle) * maxDistance;
+
+                pupil.style.transform = `translate(${pupilTranslateX}px, ${pupilTranslateY}px)`;
+            } else {
+                pupil.style.transform = `translate(0px, 0px)`; 
+            }
+        });
+
+
+    </script>
+
+
+
+</body>
+
+</html>
